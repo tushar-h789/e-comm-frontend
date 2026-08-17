@@ -4,17 +4,18 @@ A simple Next.js storefront that lists products from a public REST API and shows
 
 ## Project Overview
 
-Aurel is a small, production-quality product catalog built for an internship assignment. It focuses on clean Next.js fundamentals: App Router pages, TypeScript, API integration, responsive UI, and thoughtful loading and error states.
+Aurel is a small product catalog built with Next.js. It focuses on App Router pages, TypeScript, API integration, responsive UI, and clean loading and error states.
 
 ## Features
 
 - Product listing from a live REST API
 - Client-side product search by name
+- Pagination (8 products per page)
 - Product details page for each item
-- Dynamic product attributes with inconsistent API data
+- Dynamic product attributes for inconsistent API data
 - Responsive layout for mobile, tablet, and desktop
 - Skeleton loading states
-- Graceful error, empty, and not-found states
+- Error, empty, and not-found states
 
 ## Tech Stack
 
@@ -34,6 +35,13 @@ Product data comes from [Restful API](https://restful-api.dev/).
 ## Getting Started
 
 ```bash
+bun install
+bun dev
+```
+
+`npm` also works:
+
+```bash
 npm install
 npm run dev
 ```
@@ -49,8 +57,8 @@ No environment variables are required.
 ```text
 app/                 Routes, layout, loading, and error pages
 components/layout/   Header, footer, and hero
-components/products/ Product cards, search, grid, and details
-components/ui/       Small shared UI pieces
+components/products/ Product cards, search, pagination, and details
+components/ui/       Shared UI pieces
 lib/api.ts           API helpers
 types/product.ts     Product types
 utils/               Price, label, and product helpers
